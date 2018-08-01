@@ -1,0 +1,290 @@
+// Properties
+
+//Featured Property Area
+.button {
+
+	
+	background-color: grey; /* Green */
+    border: none;
+    color: white;
+    padding: 13px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-left: 95px;
+
+}
+
+.property-area {
+
+	width: 100%;
+
+	&-heading {
+		margin: 1em;		
+
+		span {
+			font-weight: 700;
+			font-size: 1.25em;
+			text-transform: uppercase;
+		}
+	}
+	
+	&-image {
+		margin: 1em;
+		position: relative;
+
+		img {
+			width: 100%;
+			display: block;
+		}
+
+		&:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 1em 2em;
+			background-color: $secondary-color;
+			content: "For Sale";
+			text-transform: uppercase;
+			color: #fff;
+			box-shadow: -2px 2px 3px rgba(0,0,0,0.3);
+		}
+	}
+
+	&-info {
+
+		margin: 1em;
+
+		&-heading {
+			margin-top: 1em;
+
+			span {
+				text-transform: uppercase;
+				font-weight: 700;
+			}	
+		}
+
+		&-price {
+			margin-top: .25em;
+			font-weight: 700;
+		}
+
+		&-address {
+			margin-top: 1em;
+			font-weight: 300;
+		}
+
+		&-description {
+			margin-top: 1em;
+		}
+
+		&-area {
+			margin-top: 1em;
+			flex: 1 0 40%;
+
+
+			i {
+				font-size: 1.75em;
+			}
+
+			span {
+				font-size: 1.5em;
+				margin-left: .5em;
+			}
+		}
+
+
+		&-spaces {
+			margin-top: 1em;
+			flex: 1 0 40%;
+
+			i {
+				font-size: 1.75em;
+			}
+
+			span {
+				font-size: 1.5em;
+				margin-left: .5em;
+			}
+		}
+
+		&-list {
+			flex: 1 0 90%;
+
+			ul {
+				margin: 1em;
+				padding: 0;
+				display: flex;
+				flex-wrap: wrap;
+
+				li {
+					margin-left: .25em;
+					flex: 1 0 40%;
+				}
+			}
+		}
+
+		&-second {
+			margin: 1em;
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+//Bottom Property Slider
+
+.property-slider {
+	width: 100%;
+
+	&-property {
+
+		&-heading {
+			
+			margin: 1em;
+
+			span {
+				font-weight: 700;
+				font-size: 1.25em;
+			}
+		}
+
+		.for-sale:after{
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 1em 2em;
+			background-color: $barfoot-blue;
+			content: "For Sale";
+			text-transform: uppercase;
+			color: #fff;
+			box-shadow: -2px 2px 3px rgba(0,0,0,0.3);
+		}
+
+		&-image {
+
+			margin: 1em;
+			position: relative;
+
+			img {
+				display: block;
+				width: 100%;
+			}
+
+			&:after {
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: 1em 2em;
+				background-color: $barfoot-red;
+				content: "For Lease";
+				text-transform: uppercase;
+				color: #fff;
+				box-shadow: -2px 2px 3px rgba(0,0,0,0.3);
+			}
+		}
+
+		&-price {
+			margin: .5em 1em;
+
+			span {
+				font-weight: 500;
+			}
+		}
+
+		&-description {
+			margin: 1em;
+		}
+	}
+
+	.property-area-info-list {
+
+		ul {
+
+			li {
+				flex: 1 0 90%;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width : 40em) {
+	.property-area {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 1em 0;
+
+		&-info {
+			flex: 1 0 40%;
+		}
+
+		&-info-second {
+			flex: 1 0 40%;
+		}
+	}
+}
+
+@media only screen and (min-width : 60em) {
+
+	.property-area-outer {
+		max-width: 70em;
+		margin: 3em auto;
+	}
+
+	.property-area {
+		// border: 1px red solid;
+		// padding: 0 5em;
+
+		&-heading {
+			flex: 1 0 90%;
+		}
+
+		&-image {
+			flex: 1 0 30%;
+		}
+		
+		&-info {
+			flex: 1 0 30%;
+
+			&-area {
+			flex: 1 0 90%;
+			margin-top: 0;
+
+			}
+
+			&-heading {
+				margin-top: 0;
+			}
+
+			&-spaces {
+				flex: 1 0 90%;
+			}
+
+			&-list {
+				ul {
+					li {
+						flex: 1 0 90%;
+					}
+				}
+			}
+		}
+
+		&-info-second {
+			flex: 1 0 30%;
+
+		}
+	}
+
+	.property-slider {
+		display: flex;
+		justify-content: center;
+		max-width: 70em;
+		margin: 3em auto;
+
+		&-property {
+			flex: 1 0 30%;
+		}
+	}
+}
